@@ -1,0 +1,21 @@
+[2022-04-22 16:39:36,458] - INFO: ---------- 测试开始 ----------
+[2022-04-22 16:39:36,458] - INFO: 接口地址：https://lillytest.zenm.vip/iot/order/register/orders/
+[2022-04-22 16:39:36,459] - INFO: 请求参数：{'start_time_value': 1639124206.3904681, 'mac': 'FE9718177155', 'send_coordinate': '106.566206,29.578715', 'record_interval': 2, 'model_num': '', 'conn_temp': 25.170000076293945, 'is_abnormal': 0, 'status': 1, 'high_temp': 8, 'receive_coordinate': '', 'start_time': '2021-12-10 08:16:46', 'orders': [{'number': 'apitest_20211222_100', 'client_id': '接口测试', 'contact_number': '', 'compand_address': '', 'contact_id': ''}], 'abnormal_times': 0, 'content': '{"triggers":[{"index":0,"section_events":0,"temp2":8,"symbol1":1,"symbol2":1,"triggerAbnormal":0,"triggered":0,"duration":0,"symbol":0,"temp1":2,"temp":0,"type":0,"count":0},{"section_events":0,"temp":2,"symbol2":0,"duration":0,"index":0,"count":0,"temp2":0,"triggerAbnormal":0,"temp1":0,"triggered":0,"symbol":0,"type":2,"symbol1":0},{"triggered":0,"triggerAbnormal":0,"temp2":20,"index":0,"symbol2":1,"symbol":0,"count":0,"section_events":0,"temp1":8,"symbol1":0,"duration":2880,"temp":0,"type":3},{"temp1":0,"symbol2":0,"triggered":0,"temp2":0,"index":0,"temp":20,"count":0,"type":1,"duration":0,"symbol":0,"symbol1":0,"section_events":0,"triggerAbnormal":0}]}', 'goodType': 'Lilly China Cold Chain Products', 'battery_level': 102, 'low_temp': 2, 'profile_id': 132, 'OS': 1, 'software_ver': '', 'traynumber': '', 'version': 1, 'delayed': 0, 'currentTemp': 25.170000076293945}
+[2022-04-22 16:39:37,416] - INFO: 响应参数：
+[2022-04-22 16:39:37,417] - INFO: 响应参数：{'message': 'success', 'data': [{'order_id': 891, 'number': 'apitest_20211222_100'}], 'result': 0}
+[2022-04-22 16:39:37,418] - INFO: 原运单号：apitest_21211210_102
+[2022-04-22 16:39:37,419] - INFO: 最新运单号：apitest_20211222_100
+[2022-04-22 16:39:37,419] - INFO: 原order_id：27428
+[2022-04-22 16:39:37,419] - INFO: 最新order_id：891
+[2022-04-22 16:39:37,421] - INFO: ---------- 测试通过 ----------
+
+[2022-04-22 16:39:37,422] - INFO: ---------- 测试结束 ----------
+
+[2022-04-22 16:44:35,125] - INFO: ---------- 测试开始 ----------
+[2022-04-22 16:44:35,125] - INFO: 接口地址：https://lillytest.zenm.vip/iot/order/update/
+[2022-04-22 16:44:35,127] - INFO: 请求参数：{'model_num': 'MOT-U401', 'low_temp': 2, 'is_abnormal': 1, 'content': '{"triggers":[{"symbol":0,"temp1":2,"temp2":8,"temp":0,"section_events":0,"symbol1":1,"type":0,"triggerAbnormal":0,"triggered":0,"symbol2":1,"duration":0,"count":0,"index":0},{"triggerAbnormal":0,"section_events":0,"symbol2":0,"temp2":0,"type":2,"count":0,"temp":2,"duration":0,"temp1":0,"index":1,"triggered":0,"symbol":0,"symbol1":0},{"symbol2":1,"triggerAbnormal":0,"count":0,"temp2":20,"triggered":0,"type":3,"symbol":0,"temp":0,"section_events":0,"index":2,"symbol1":0,"duration":2880,"temp1":8},{"temp":20,"index":3,"duration":0,"temp2":0,"triggerAbnormal":1,"section_events":1,"symbol":0,"temp1":0,"triggered":1639107767000,"count":77,"symbol2":0,"symbol1":0,"type":1}]}', 'OS': 1, 'high_temp': 8, 'delayed': 0, 'number': 'apitest_20211222_100', 'record_interval': 2, 'orderNumber': '', 'lowest_temp': 23.040000915527344, 'receive_coordinate': '106.566202,29.578713', 'highest_temp': 24.549999237060547, 'traynumber': '', 'dataSize': 77, 'status': 2, 'end_time': '2021-12-10 06:14:04', 'version': 1, 'order_id': 891, 'start_time': '2021-12-10 03:42:47', 'software_ver': '4.1.1', 'good_type': 'Lilly China Cold Chain Products', 'client_id': '', 'battery_level': -99999, 'conn_temp': -99999}
+[2022-04-22 16:44:36,203] - INFO: 响应参数：{'order_id': 891, 'message': 'success', 'data': {'mac': 'FE9718177155', 'number': 'apitest_20211222_100'}, 'result': 0}
+[2022-04-22 16:44:36,203] - INFO: ---------- 测试通过 ----------
+
+[2022-04-22 16:44:36,215] - INFO: ---------- 测试结束 ----------
+
