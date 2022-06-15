@@ -23,8 +23,6 @@ class Send(unittest.TestCase):
     def setUp(self):
         self.url = get_config(name='lillyHost_online',key='url') + get_config(name='lilly_api',key='lilly_onetemp')
         self.getOrderInfo_url = get_config(name='lillyHost_online', key='url') + get_config(name='lilly_api', key='lilly_orderinfo')
-        self.send_data = get_filePath('test_data/mmc_lilly/send_data.json')
-        self.receive_data = get_filePath('test_data/mmc_lilly/receive_data.json')
         self.headers = Login().headers
         self.se = Login().se
         self.headers['Cookie'] = Login().get_userAuth()
@@ -41,7 +39,7 @@ class Send(unittest.TestCase):
         log.info('---------- 测试开始 ----------')
         log.info('接口地址：' + self.getOrderInfo_url)
         gw_data = {
-                    "gw_mac": "VB5121A720040",
+                    "gw_mac": "VS01187H00408",
                     "status": 1
         }
         log.info('请求参数：' + str(gw_data))
@@ -85,7 +83,8 @@ class Send(unittest.TestCase):
 
         # 获取时差（分钟数）公式：【(结束时间戳-开始时间戳)/60/60/24】该公式得到天数
         timeDiff = (currentTime - get_Start_time) /60
-        log.info('记录时长（分钟） ' + str(int(timeDiff)))
+        log.info('记录时长（分钟）： ' + str(int(timeDiff)))
+        log.info('应该上传点位：' + str(int(timeDiff / 2)))
 
         for i in range(0, len(resp_data)):
             # 写入时间

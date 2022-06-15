@@ -5,12 +5,14 @@
 # software: PyCharm
 from test_dir.common.basic import timeToStamp
 
-stime = '2022-06-01 14:21:11'
-etime = '2022-06-06 15:57:43'
+
+stime = '2022-06-10 18:58:00'
+etime = '2022-06-11 00:00:00'
+interval = 1
 
 t1 = timeToStamp(stime)
 t2 = timeToStamp(etime)
 
-minutes = (t2 - t1 ) / 60
-
-print(int(minutes / 0.5))
+minutes = (t2 - t1) / 60
+print("时长（分钟）：", minutes)
+print("温度点位：", int(minutes / interval))
