@@ -26,6 +26,7 @@ class Send(unittest.TestCase):
 
     def test_getDevicesRegInfo(self):
         """
+        TODO
         获取设备的注册时间
         :return:
         """

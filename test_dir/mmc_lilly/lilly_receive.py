@@ -26,6 +26,7 @@ class Receive(seldom.TestCase):
 
     def test_01_receive(self):
         '''
+        TODO
         收货接口
         :return: None
         '''

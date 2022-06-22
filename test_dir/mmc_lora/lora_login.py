@@ -33,6 +33,7 @@ class Login():
 
     def login(self):
         '''
+        TODO
         app端登录获取cookie
         :return:
         '''
@@ -51,6 +52,7 @@ class Login():
         with open(self.userAuth, 'w') as f:
             f.write('csrftoken='+csrftoken+';sessionid='+sessionid)
         self.se.close()
+        return '登录成功'
 
 
 if __name__ == '__main__':

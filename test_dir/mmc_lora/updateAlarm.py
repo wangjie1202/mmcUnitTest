@@ -28,6 +28,7 @@ class Lora_USA(unittest.TestCase):
 
     def test_updateAlarm(self):
         '''
+        TODO
         获取报警中心报警数量并完成处理
         :return:
         '''
