@@ -39,7 +39,7 @@ class Send(unittest.TestCase):
         log.info('---------- 测试开始 ----------')
         log.info('接口地址：' + self.getOrderInfo_url)
         gw_data = {
-                    "gw_mac": "VS01187H00408",
+                    "gw_mac": "VB5121A720040",
                     "status": 1
         }
         log.info('请求参数：' + str(gw_data))
