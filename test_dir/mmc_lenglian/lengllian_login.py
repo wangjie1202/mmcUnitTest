@@ -42,18 +42,22 @@ class Login():
         data = {"password":"mxd12345","username":"mxd"}
         res = self.se.post(url=self.url, headers=self.headers, json=data)
 
-        #正则提取csrftoken和sessionid
-        temp = res.headers['Set-Cookie']
-        csrftoken = re.findall('csrftoken=(.*?); expires', temp)
-        csrftoken = csrftoken[0]
-        sessionid = re.findall('sessionid=(.*?); expires=', temp)
-        sessionid = sessionid[0]
+        if(res.json()['result']==200):
+            #正则提取csrftoken和sessionid
+            temp = res.headers['Set-Cookie']
+            csrftoken = re.findall('csrftoken=(.*?); expires', temp)
+            csrftoken = csrftoken[0]
+            sessionid = re.findall('sessionid=(.*?); expires=', temp)
+            sessionid = sessionid[0]
 
-        #写入cookie
-        with open(self.userAuth, 'w') as f:
-            f.write('csrftoken='+csrftoken+';sessionid='+sessionid)
-        self.se.close()
-        return '登录成功'
+            #写入cookie
+            with open(self.userAuth, 'w') as f:
+                f.write('csrftoken='+csrftoken+';sessionid='+sessionid)
+            self.se.close()
+            return '登录成功'
+        else:
+            print(res.json())
+            return '登录失败'
 
 
 if __name__ == '__main__':
