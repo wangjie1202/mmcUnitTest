@@ -92,7 +92,7 @@ def getRandomStr(number):
 
 
 #Excel读取方法
-def read_excelInfo(path, sheetIndex):
+def read_excelInfo(path, sheetNamee):
     """
     Excel读取方法
     :param path:
@@ -101,7 +101,7 @@ def read_excelInfo(path, sheetIndex):
     :return:
     """
     workbook = xlrd.open_workbook(path, "rb")
-    table = workbook.sheet_by_index(sheetIndex)
+    table = workbook.sheet_by_name(sheetNamee)
     return table
 
 
@@ -145,7 +145,7 @@ def update_excelInfo(path, sheetIndex, row, col, value):
 
 
 #将Excel中的内容输出为一个列表
-def list_outputExcelInfo(dataPath, indexSheet, startRow, startCol):
+def list_outputExcelInfo(dataPath, sheetNane, startRow, startCol):
     """
     将Excel中的内容输出为一个列表
     :param dataPath: 文件路径
@@ -154,7 +154,7 @@ def list_outputExcelInfo(dataPath, indexSheet, startRow, startCol):
     :param startCol: 开始列
     :return:
     """
-    table = read_excelInfo(dataPath, indexSheet)
+    table = read_excelInfo(dataPath, sheetNane)
     rows = table.nrows  # 获取行数
     columns = table.ncols  # 获取列数
     list = []
