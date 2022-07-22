@@ -9,7 +9,7 @@ from test_dir.common.basic import list_outputExcelInfo, get_filePath, update_exc
 write_filepath = get_filePath("test_data/result.xls")
 read_filepath = get_filePath("test_data/demotest.xls")
 #读取excel输出成数组
-arr = list_outputExcelInfo(read_filepath, 0,1,1)
+arr = list_outputExcelInfo(read_filepath, "Sheet1",1,1)
 #读取数组内的基数下标
 arr = arr[::2]
 count = 0
