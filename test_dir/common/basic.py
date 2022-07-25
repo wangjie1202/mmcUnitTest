@@ -17,12 +17,21 @@ import time
 
 
 #生成当前时间戳
-def getNowTime():
+def getNowStrfTime():
     """
     生成当前时间戳
     :return:
     """
     time_stamp = datetime.datetime.now().strftime('%Y%m%d%H%M%S%f')
+    return time_stamp
+
+#生成当前时间
+def getNowTime():
+    """
+    生成当前时间
+    :return:
+    """
+    time_stamp = datetime.datetime.now().strftime('%Y%m%d%H%M%S')
     return time_stamp
 
 #时间戳转日期

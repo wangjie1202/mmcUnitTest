@@ -14,7 +14,7 @@ from test_dir.common.basic import get_config
 class BigAppBasicInfo(unittest.TestCase):
 
     def setUp(self):
-        self.hearders = BigAppBasic().headers
+        self.headers = BigAppBasic().headers
         self.se = BigAppBasic().se
         self.warning = BigAppBasic().warning
         self.basicInfoUrl = BigAppBasic().host + get_config(name='bigAppHost', key='bigApp_getBasicInfo')
@@ -26,7 +26,7 @@ class BigAppBasicInfo(unittest.TestCase):
     def test_getBasicInfo(self):
         self.log.info('---------- 测试开始 ----------')
         self.log.info('接口地址：' + self.basicInfoUrl)
-        resp = self.se.post(url=self.basicInfoUrl, headers=self.hearders)
+        resp = self.se.post(url=self.basicInfoUrl, headers=self.headers)
         print(resp)
 
 

@@ -24,7 +24,8 @@ class BigAppFeedBack(unittest.TestCase):
     # print(testData)
 
     def setUp(self):
-        self.hearders = BigAppBasic().headers
+        self.headers = BigAppBasic().headers
+        self.headers['AUTHORIZATION'] = BigAppBasic().get_userToken()
         self.se = BigAppBasic().se
         self.warning = BigAppBasic().warning
         self.feedBackUrl = BigAppBasic().host + get_config(name='bigAppHost', key='bigApp_feedback')
@@ -38,15 +39,14 @@ class BigAppFeedBack(unittest.TestCase):
     def test_getBasicInfo(self, testData, assertStatusCode, assertData):
         """
         用户反馈接口测试
-        :return:
         """
         self.log.info('---------- 测试开始 ----------')
         self.log.info('接口地址：' + self.feedBackUrl)
         self.log.info('请求参数：' + str(testData))
-        resp = self.se.post(url=self.feedBackUrl, headers=self.hearders, json=testData)
+        resp = self.se.post(url=self.feedBackUrl, headers=self.headers, json=testData)
         self.assertEqual(resp.status_code, assertStatusCode, msg="服务器响应码"+str(resp.status_code))
         self.log.debug('响应参数：' + str(resp.json()))
-        self.assertEqual(resp.json()['code'], assertData, msg="接口返回信息错误，请检查"+ str(resp.json()))
+        self.assertEqual(resp.json()['code'], assertData, msg="接口返回信息错误，请检查" + str(resp.json()))
         print('\n')
 
 
